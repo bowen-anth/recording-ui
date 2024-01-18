@@ -66,7 +66,7 @@ stopButton.addEventListener("click", function () {
   }
 });
 
-function startTimer() {
+const startTimer = () => {
   second++;
 
   if (second == 60) {
@@ -80,12 +80,12 @@ function startTimer() {
   }
 
   updateDisplay();
-}
+};
 
-function updateDisplay() {
+const updateDisplay = () => {
   let hrString = hour.toString().padStart(2, "0");
   let minString = minute.toString().padStart(2, "0");
   let secString = second.toString().padStart(2, "0");
 
   time.textContent = `${hrString}:${minString}:${secString}`;
-}
+};
